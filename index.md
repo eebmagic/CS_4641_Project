@@ -24,4 +24,10 @@ Discussion about possible results
 3 References
 
 ## Proposed Timeline
-Some timeline details
+### Project Proposal (10-7)
+The main idea of what our project - estimating rent based on the defining parameters of a County in the US - will consist of.
+| Intro/Background | Problem Definition | Methods | Potential Results and Discussion | References | Timeline | Proposal Video |
+| ---------------- | ------------------ | ------- | -------------------------------- | ---------- | -------- | -------------- |
+| Sagar | Sagar | Felix | Evan | Sagar | Carlo | Ethan |
+---
+### 
