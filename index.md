@@ -8,11 +8,10 @@
 
 ---
 
-## Intro/Background
-Background details
+## Background and Problem Definition
+Understanding how housing prices correlate with demographics can help to predict how property values will change with changes in the population, income, ethnicity, areas of employment, and other demographic factors of an area. This insight can help investors in real estate decide where to buy and sell property and could inform governments on how they can make housing more affordable.
 
-## Problem Definition
-Outline problem we attempt to solve
+This project aims to predict housing prices of counties in the United States given demographic data and discover relevant correlations using the American Community Survey of 2015 and the Zillow Rent Index, which tracks the median housing price per square foot of a given area. 
 
 ## Methods
 Our problem is a regression problem, where we attempt to approximate the relationship between independent variables (population, etc.) and a dependent variable (median rent).
