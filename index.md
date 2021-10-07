@@ -1,4 +1,4 @@
-# Predicting the median housing price per square foot of counties in the US given demographic data:
+# Predicting housing prices of counties in the US given demographic data:
 ## Members:
 - Ethan Bolton
 - Carlo Casas
@@ -29,7 +29,7 @@ MuonNeutrino. (2019). US Census Demographic Data (Version 3) [Data file] Retriev
 
 Schuetz, Jenny. “How Can Government Make Housing More Affordable?” *Policy 2020: Voter Vials*, Brookings, 15 Oct. 2019, https://www.brookings.edu/policy2020/votervital/how-can-government-make-housing-more-affordable/.
 
-Zillow Group. (2017). Zillow Rent Index, 2010-Present (Version 1) [Data file] Retrieved from https://www.kaggle.com/zillow/rent-index
+Zillow Group. (2017). Zillow Rent Index, 2010-Present (Version 1) [Data file] Retrieved from https://www.kaggle.com/zillow/rent-index.
 
 ## Proposed Timeline
 ### Project Proposal (10-7)
