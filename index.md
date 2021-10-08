@@ -1,4 +1,4 @@
-# Predicting housing prices of counties in the US given demographic data:
+# Predicting Housing Prices in US Counties from US Census Data and Other Local Features:
 ## Members:
 - Ethan Bolton
 - Carlo Casas
@@ -9,7 +9,7 @@
 ---
 
 ## Background and Problem Definition
-Understanding how housing prices correlate with demographics can help to predict how property values will change with changes in the population, income, ethnicity, areas of employment, and other demographic factors of an area. This insight can help investors in real estate decide where to buy and sell property and could inform governments on how they can make housing more affordable.
+Understanding how housing prices correlate with demographics can help to predict how property values will adjust to changes in the population, income, ethnicity, areas of employment, and other features of an area. This insight can help investors in real estate decide where to buy and sell property and could inform governments on how they can make housing more affordable. Additionally this tool could be used to predict future changes rent before rent is adjusted to correspond with local changes in an area.
 
 This project aims to predict housing prices of counties in the United States given demographic data and discover relevant correlations using supervised machine learning with the American Community Survey of 2015 and the Zillow Rent Index, which tracks the median housing price per square foot of a given area.
 
@@ -23,13 +23,6 @@ Next, we need to learn a mapping from the input features to the output. There ar
 
 ## Potential Results / Discussion
 The regression analysis will yield a relationship between median rent of United States counties and the various demographics of each. Given the wide range of demographic data from the census dataset, we seek to find what parameter or set of parameters correlates to the highest or lowest rent prices. Examples of these demographic parameters include age, ethnicity, income, poverty, and unemployment, commute time, industry distribution, etc. While some parameters seem directly correlated, others may yield unexpected dependence to rent. 
-
-## References
-MuonNeutrino. (2019). US Census Demographic Data (Version 3) [Data file] Retrieved from https://www.kaggle.com/muonneutrino/us-census-demographic-data.
-
-Schuetz, Jenny. “How Can Government Make Housing More Affordable?” *Policy 2020: Voter Vials*, Brookings, 15 Oct. 2019, https://www.brookings.edu/policy2020/votervital/how-can-government-make-housing-more-affordable/.
-
-Zillow Group. (2017). Zillow Rent Index, 2010-Present (Version 1) [Data file] Retrieved from https://www.kaggle.com/zillow/rent-index.
 
 ## Proposed Timeline
 ### Project Proposal (10-7)
@@ -48,3 +41,15 @@ At this point we hope to have tried various methods for predicting output from a
 
 ### Final Project (12-7)
 With the final project, the main step from the midpoint report will hopefully be optimization and a finalized algorithm for producing more accurate predictions. With a finalized algorithm, hopefully we can not only predict an output from the others, but know which parameters have the greatest impact on our output. After the midpoint report we will collectively choose which model fits our needs best and work together to optimize the hyperparameters. 
+
+---
+
+## References
+MuonNeutrino. (2019). US Census Demographic Data (Version 3) [Data file] Retrieved from https://www.kaggle.com/muonneutrino/us-census-demographic-data.
+
+US Census Bureau. (2019) ACS Demographic and Housing Estimates https://data.census.gov/cedsci/table?q=demographic&tid=ACSDP1Y2019.DP05
+
+Schuetz, Jenny. “How Can Government Make Housing More Affordable?” *Policy 2020: Voter Vials*, Brookings, 15 Oct. 2019, https://www.brookings.edu/policy2020/votervital/how-can-government-make-housing-more-affordable/.
+
+Zillow Group. (2017). Zillow Rent Index, 2010-Present (Version 1) [Data file] Retrieved from https://www.kaggle.com/zillow/rent-index.
+
