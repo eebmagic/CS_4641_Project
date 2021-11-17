@@ -34,7 +34,7 @@ Next, we need to learn a mapping from the input features to the output. There ar
 ## Results and Discussion
 R<sup>2</sup> is a stastical measure representing the the extent to which the variance in one variable explains the variance in another variable. R<sup>2</sup> is commonly used as an alternative to Mean Squared Error for analyzing regression models, as it is not scaled by the scale of its inputs.
 
-To analyze the effectiveness of the Ridge Regression models, we have collected the R<sup>2</sup> values of 1000 models of each type in order negate variance created by the use of different train/test splits of the collected data.
+To analyze the effectiveness of the Ridge Regression models, we have collected the R<sup>2</sup> values of 1000 models of each type in order to negate variance created by the use of different train/test splits of the collected data.
 
 The average R<sup>2</sup> value for models using raw data was **0.60133236** with a standard deviation of **0.07622105**
 
