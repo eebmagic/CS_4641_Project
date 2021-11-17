@@ -31,14 +31,24 @@ Our problem is a regression problem, where we attempt to approximate the relatio
 
 Next, we need to learn a mapping from the input features to the output. There are many approaches we can choose from for this regression task. From linear approaches, we can experiment with simple linear regression, Lasso regression, and GLMs like Gamma regression. Among non-linear approaches, we can try support vector regression and feedforward neural networks, and we can also use additional input features generated from non-linear transformations of original inputs with the linear methods. Afterward, we can compare training time and performance of these various approaches, and we can probe the trained models to see what features are particularly informative of the output.
 
-## Potential Results / Discussion
-The regression analysis will yield a relationship between median rent of United States counties and the various demographics of each. Given the wide range of demographic data from the census dataset, we seek to find what parameter or set of parameters correlates to the highest or lowest rent prices. Examples of these demographic parameters include age, ethnicity, income, poverty, and unemployment, commute time, industry distribution, etc. While some parameters seem directly correlated, others may yield unexpected dependence to rent. 
+## Results and Discussion
+R<sup>2</sup> is a stastical measure representing the the extent to which the variance in one variable explains the variance in another variable. R<sup>2</sup> is commonly used as an alternative to Mean Squared Error for analyzing regression models, as it is not scaled by the scale of its inputs.
 
-Among our preprocessing methods of the data, we identified forward feature selection as the most effective. As to the actual effectiveness of the preprocessing, we saw a slight improvement in the R2 value of our ridge regression, as illustrated below.
+To analyze the effectiveness of the Ridge Regression models, we have collected the R<sup>2</sup> values of 1000 models of each type in order negate variance created by the use of different train/test splits of the collected data.
 
-![alt text](https://github.com/eebmagic/CS_4641_Project/blob/master/images/raw_ridge_regression.png)
+The average R<sup>2</sup> value for models using raw data was **0.60133236** with a standard deviation of **0.07622105**
 
-![alt text](https://github.com/eebmagic/CS_4641_Project/blob/master/images/forward_selection_ridge_regression.png)
+The average R<sup>2</sup> value for models using only forward selection features was **0.59631823** with a standard deviation of **0.07786187**
+
+The R<sup>2</sup> value of approximately **0.60** shows that over half of the variation amongst the data can be explained by the model's inputs. This relationship between the demographic data which has been collected and the average price per sq. ft in a county as recorded by the Zillow Rent Index is encouraging in showing the effectivity of regression models utilizing the dataset.
+
+<img src="images/raw_ridge_regression.png" alt="drawing" width="410"/>
+<img src="images/forward_selection_ridge_regression.png" alt="drawing" width="410"/>
+
+With the reduction of features using forward selection, a hope was to see an increase in the value of R<sup>2</sup> for the model. As the values for R<sup>2</sup> for each model were within the standard deviations from the mean, there is negligble difference in the determination coefficient using forward selection features. While this aspect was not improved, an analysis of the **Predicted Normalized Price Per Sq. Ft** versus the **Actual Normalized Price Per Sq. Ft** for each model shows a tendency to underestimate when making predictions. A trendline with a slope of 1 shows neither a tendency to underestimate or overestimate. The use of forward selection features increased the slope of the trendline from **0.57657903** to **0.755802** showing significant reduction of the tendency to underestimate.
+
+## Conclusion
+The creation of our first model has given us a positive outlook on the effectiveness that our future models can have. The R<sup>2</sup> of 0.60 shows a level of determination which can be predicted on between our model's inputs and the average price per sq. ft in a county as recorded by the Zillow Rent Index. The reduction in the tendency to underestimate provided by the use of forward selection features is hopeful in showing us that fine-tuning of our models in the future can yield positive results. The creation of additional models in the future through the use of other machine learning techniques will allow us to measure correlations present in our collected data in different ways and produce stronger results.
 
 ## Proposed Timeline
 ### Project Proposal (10-7)
