@@ -24,7 +24,7 @@ The U.S Census dataset includes several demographic features of counties. This s
 These columns include information such as median household income, racial demographics, poverty rates, profession, and commuting habbits (drive, transit, walk, commute time, etc.).
 
 To clean the data, the first thing we did was remove the counties that don't overlap between the two data sets. The datasets were then sorted and combined into one, with each numerical column normalized.
-We have implemented several feature selection methods: forward selection, backward selection, sequential selection, and lasso selection.
+We have implemented several feature selection methods: forward selection, backward selection, and lasso selection.
 
 ## Methods
 Our problem is a regression problem, where we attempt to approximate the relationship between independent variables (population, etc.) and a dependent variable (median rent).
