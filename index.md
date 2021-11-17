@@ -13,16 +13,24 @@ Understanding how housing prices correlate with demographics can help to predict
 
 This project aims to predict housing prices of counties in the United States given demographic data and discover relevant correlations using supervised machine learning with the American Community Survey of 2015 and the Zillow Rent Index, which tracks the median housing price per square foot of a given area.
 
+## Data Collection and Preprocessing
+Two different datasets from Kaggle were selected in this analysis -- the 2015 U.S Census and the Zillow Rent Index. 
+
+The Zillow Rent Index is a dollar-valued index that captures average market rent for a given demographic and/or geographic group. Much of this data has been prescreened and cleaned by Zillow by removing outliers and weighting the homes that actually rent as higher. The data provided details the Rent Index for each month for each U.S City (and corresponding county which will be used to match with the census) from 2010 to 2017. The data has 13131 unique cities and 1820 counties. The U.S Census data on the other hand includes demographic and geographic columns by U.S County. These columns include things like income, race, poverty levels, Voting Age, and gender.
+
+To process the data, the first thing we did was remove the counties that don't overlap between the two data sets. The datasets were then sorted and combined into one, with each numerical column normalized.
+
 ## Methods
 Our problem is a regression problem, where we attempt to approximate the relationship between independent variables (population, etc.) and a dependent variable (median rent).
-
-First, we need to preprocess the data, which includes both numerical and categorical variables. 
-For numerical data, we should normalize the values, and for categorical data, we can try simple integer encoding or one-hot encoding depending on the variable.
 
 Next, we need to learn a mapping from the input features to the output. There are many approaches we can choose from for this regression task. From linear approaches, we can experiment with simple linear regression, Lasso regression, and GLMs like Gamma regression. Among non-linear approaches, we can try support vector regression and feedforward neural networks, and we can also use additional input features generated from non-linear transformations of original inputs with the linear methods. Afterward, we can compare training time and performance of these various approaches, and we can probe the trained models to see what features are particularly informative of the output.
 
 ## Potential Results / Discussion
 The regression analysis will yield a relationship between median rent of United States counties and the various demographics of each. Given the wide range of demographic data from the census dataset, we seek to find what parameter or set of parameters correlates to the highest or lowest rent prices. Examples of these demographic parameters include age, ethnicity, income, poverty, and unemployment, commute time, industry distribution, etc. While some parameters seem directly correlated, others may yield unexpected dependence to rent. 
+
+![alt text](https://github.com/eebmagic/CS_4641_Project/blob/master/images/raw_ridge_regression.png)
+
+![alt text](https://github.com/eebmagic/CS_4641_Project/blob/master/images/forward_selection_ridge_regression.png)
 
 ## Proposed Timeline
 ### Project Proposal (10-7)
@@ -52,4 +60,3 @@ US Census Bureau. (2019) ACS Demographic and Housing Estimates https://data.cens
 Schuetz, Jenny. “How Can Government Make Housing More Affordable?” *Policy 2020: Voter Vials*, Brookings, 15 Oct. 2019, https://www.brookings.edu/policy2020/votervital/how-can-government-make-housing-more-affordable/.
 
 Zillow Group. (2017). Zillow Rent Index, 2010-Present (Version 1) [Data file] Retrieved from https://www.kaggle.com/zillow/rent-index.
-
