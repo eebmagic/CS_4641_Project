@@ -34,6 +34,8 @@ Next, we need to learn a mapping from the input features to the output. There ar
 ## Potential Results / Discussion
 The regression analysis will yield a relationship between median rent of United States counties and the various demographics of each. Given the wide range of demographic data from the census dataset, we seek to find what parameter or set of parameters correlates to the highest or lowest rent prices. Examples of these demographic parameters include age, ethnicity, income, poverty, and unemployment, commute time, industry distribution, etc. While some parameters seem directly correlated, others may yield unexpected dependence to rent. 
 
+Among our preprocessing methods of the data, we identified forward feature selection as the most effective. As to the actual effectiveness of the preprocessing, we saw a slight improvement in the R2 value of our ridge regression, as illustrated below.
+
 ![alt text](https://github.com/eebmagic/CS_4641_Project/blob/master/images/raw_ridge_regression.png)
 
 ![alt text](https://github.com/eebmagic/CS_4641_Project/blob/master/images/forward_selection_ridge_regression.png)
