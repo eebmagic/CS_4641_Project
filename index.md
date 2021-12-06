@@ -38,6 +38,7 @@ R<sup>2</sup> is a stastical measure representing the the extent to which the va
 To analyze the effectiveness of the regression models, we have collected the R<sup>2</sup> values of 1000 models of each type in order to negate variance created by the use of different train/test splits of the collected data.
 
 <b>Linear Regression</b><br>
+<img src="images/;inearreg.png" alt="drawing" width="410"/>
 <b>Lasso Regression</b><br>
 <b>Ridge Regression</b><br>
 The average R<sup>2</sup> value for models using raw data was **0.60133236** with a standard deviation of **0.07622105**
@@ -51,12 +52,14 @@ The R<sup>2</sup> value of approximately **0.60** shows that over half of the va
 
 With the reduction of features using forward selection, a hope was to see an increase in the value of R<sup>2</sup> for the model. As the values for R<sup>2</sup> for each model were within the standard deviations from the mean, there is negligble difference in the determination coefficient using forward selection features. While this aspect was not improved, an analysis of the **Predicted Normalized Price Per Sq. Ft** versus the **Actual Normalized Price Per Sq. Ft** for each model shows a tendency to underestimate when making predictions. A trendline with a slope of 1 shows neither a tendency to underestimate or overestimate. The use of forward selection features increased the slope of the trendline from **0.57657903** to **0.755802** showing significant reduction of the tendency to underestimate.
 <b>GLMs</b>
+<img src="images/glm.png" alt="drawing" width="410"/>
 
 ### Non-Linear Approaches
 <b>Support Vector Regression</b><br>
+<img src="images/SVR.png" alt="drawing" width="410"/>
 <b>Random Forest?</b><br>
 <b>Neural Networks</b><br>
-
+<img src="images/neural_network.png" alt="drawing" width="410"/>
 
 ## Conclusion
 The creation of our first model has given us a positive outlook on the effectiveness that our future models can have. The R<sup>2</sup> of 0.60 shows a level of determination which can be predicted on between our model's inputs and the average price per sq. ft in a county as recorded by the Zillow Rent Index. The reduction in the tendency to underestimate provided by the use of forward selection features is hopeful in showing us that fine-tuning of our models in the future can yield positive results. The creation of additional models in the future through the use of other machine learning techniques will allow us to measure correlations present in our collected data in different ways and produce stronger results.
