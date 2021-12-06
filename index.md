@@ -32,13 +32,13 @@ Our problem is a regression problem, where we attempt to approximate the relatio
 Next, we need to learn a mapping from the input features to the output. There are many approaches we can choose from for this regression task. From linear approaches, we can experiment with simple linear regression, Lasso regression, and GLMs like Gamma regression. Among non-linear approaches, we can try support vector regression and feedforward neural networks, and we can also use additional input features generated from non-linear transformations of original inputs with the linear methods. Afterward, we can compare training time and performance of these various approaches, and we can probe the trained models to see what features are particularly informative of the output.
 
 ## Results and Discussion
-# Linear Approaches
+### Linear Approaches
 <b>Linear Regression</b>
 <b>Lasso Regression</b>
 <b>Ridge Regression</b>
 <b>GLMs</b>
 
-# Non-Linear Approaches
+### Non-Linear Approaches
 <b>Support Vector Regression</b>
 <b>Random Forest?</b>
 <b>Neural Networks</b>
