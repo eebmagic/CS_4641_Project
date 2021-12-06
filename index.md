@@ -33,15 +33,15 @@ Next, we need to learn a mapping from the input features to the output. There ar
 
 ## Results and Discussion
 ### Linear Approaches
-<b>Linear Regression</b>
-<b>Lasso Regression</b>
-<b>Ridge Regression</b>
+<b>Linear Regression</b><br>
+<b>Lasso Regression</b><br>
+<b>Ridge Regression</b><br>
 <b>GLMs</b>
 
 ### Non-Linear Approaches
-<b>Support Vector Regression</b>
-<b>Random Forest?</b>
-<b>Neural Networks</b>
+<b>Support Vector Regression</b><br>
+<b>Random Forest?</b><br>
+<b>Neural Networks</b><br>
 
 R<sup>2</sup> is a stastical measure representing the the extent to which the variance in one variable explains the variance in another variable. R<sup>2</sup> is commonly used as an alternative to Mean Squared Error for analyzing regression models, as it is not scaled by the scale of its inputs.
 
