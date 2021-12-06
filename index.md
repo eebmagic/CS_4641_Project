@@ -68,7 +68,10 @@ With the reduction of features using forward selection, a hope was to see an inc
 <img src="images/neural_network.png" alt="drawing" width="410"/></p>
 
 ## Conclusion
+(Old Conclusion - checkpoint)
 The creation of our first model has given us a positive outlook on the effectiveness that our future models can have. The R<sup>2</sup> of 0.60 shows a level of determination which can be predicted on between our model's inputs and the average price per sq. ft in a county as recorded by the Zillow Rent Index. The reduction in the tendency to underestimate provided by the use of forward selection features is hopeful in showing us that fine-tuning of our models in the future can yield positive results. The creation of additional models in the future through the use of other machine learning techniques will allow us to measure correlations present in our collected data in different ways and produce stronger results.
+
+(New conclusion)
 
 ## Proposed Timeline
 ### Project Proposal (10-7)
