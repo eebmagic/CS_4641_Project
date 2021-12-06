@@ -37,16 +37,12 @@ R<sup>2</sup> is a stastical measure representing the the extent to which the va
 
 To analyze the effectiveness of the regression models, we have collected the R<sup>2</sup> values of 1000 models of each type in order to negate variance created by the use of different train/test splits of the collected data.
 
-<p><b>Linear Regression</b><br>
-<<img src="images/linearreg.png" alt="drawing" width="410"/>
-</p>
+#### Linear Regression
+<img src="images/linearreg.png" alt="drawing" width="410"/>
 
-<p>
-<b>Lasso Regression</b><br>
-</p>
+#### Lasso Regression
 
-<p>
-<b>Ridge Regression</b><br>
+#### Ridge Regression
 The average R<sup>2</sup> value for models using raw data was **0.60133236** with a standard deviation of **0.07622105**
 
 The average R<sup>2</sup> value for models using only forward selection features was **0.59631823** with a standard deviation of **0.07786187**
@@ -57,18 +53,18 @@ The R<sup>2</sup> value of approximately **0.60** shows that over half of the va
 <img src="images/forward_selection_ridge_regression.png" alt="drawing" width="410"/>
 
 With the reduction of features using forward selection, a hope was to see an increase in the value of R<sup>2</sup> for the model. As the values for R<sup>2</sup> for each model were within the standard deviations from the mean, there is negligble difference in the determination coefficient using forward selection features. While this aspect was not improved, an analysis of the **Predicted Normalized Price Per Sq. Ft** versus the **Actual Normalized Price Per Sq. Ft** for each model shows a tendency to underestimate when making predictions. A trendline with a slope of 1 shows neither a tendency to underestimate or overestimate. The use of forward selection features increased the slope of the trendline from **0.57657903** to **0.755802** showing significant reduction of the tendency to underestimate.
-</p>
 
-<p>
-<b>GLMs</b><br>
+#### GLMs
 <img src="images/glm.png" alt="drawing" width="410"/>
-</p>
 
 ### Non-Linear Approaches
-<p><b>Support Vector Regression</b><br>
+
+#### Support Vector Regression
 <img src="images/SVR.png" alt="drawing" width="410"/></p>
-<p><b>Random Forest?</b><br></p>
-<p><b>Neural Networks</b><br>
+
+#### Random Forest?
+
+#### Neural Networks
 <img src="images/neural_network.png" alt="drawing" width="410"/></p>
 
 ## Conclusion
