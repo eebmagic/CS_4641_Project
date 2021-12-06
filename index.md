@@ -37,16 +37,16 @@ R<sup>2</sup> is a stastical measure representing the the extent to which the va
 
 To analyze the effectiveness of the regression models, we have collected the R<sup>2</sup> values of 1000 models of each type in order to negate variance created by the use of different train/test splits of the collected data.
 
-<p><b>Linear Regression</b>
-<img src="images/;inearreg.png" alt="drawing" width="410"/>
+<p><b>Linear Regression</b><br>
+<<img src="images/linearreg.png" alt="drawing" width="410"/>
 </p>
 
 <p>
-<b>Lasso Regression</b>
+<b>Lasso Regression</b><br>
 </p>
 
 <p>
-<b>Ridge Regression</b>
+<b>Ridge Regression</b><br>
 The average R<sup>2</sup> value for models using raw data was **0.60133236** with a standard deviation of **0.07622105**
 
 The average R<sup>2</sup> value for models using only forward selection features was **0.59631823** with a standard deviation of **0.07786187**
@@ -60,16 +60,16 @@ With the reduction of features using forward selection, a hope was to see an inc
 </p>
 
 <p>
-<b>GLMs</b>
+<b>GLMs</b><br>
 <img src="images/glm.png" alt="drawing" width="410"/>
 </p>
 
 ### Non-Linear Approaches
-<b>Support Vector Regression</b><br>
-<img src="images/SVR.png" alt="drawing" width="410"/>
-<b>Random Forest?</b><br>
-<b>Neural Networks</b><br>
-<img src="images/neural_network.png" alt="drawing" width="410"/>
+<p><b>Support Vector Regression</b><br>
+<img src="images/SVR.png" alt="drawing" width="410"/></p>
+<p><b>Random Forest?</b><br></p>
+<p><b>Neural Networks</b><br>
+<img src="images/neural_network.png" alt="drawing" width="410"/></p>
 
 ## Conclusion
 The creation of our first model has given us a positive outlook on the effectiveness that our future models can have. The R<sup>2</sup> of 0.60 shows a level of determination which can be predicted on between our model's inputs and the average price per sq. ft in a county as recorded by the Zillow Rent Index. The reduction in the tendency to underestimate provided by the use of forward selection features is hopeful in showing us that fine-tuning of our models in the future can yield positive results. The creation of additional models in the future through the use of other machine learning techniques will allow us to measure correlations present in our collected data in different ways and produce stronger results.
