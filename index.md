@@ -38,9 +38,16 @@ R<sup>2</sup> is a stastical measure representing the the extent to which the va
 To analyze the effectiveness of the regression models, we have collected the R<sup>2</sup> values of 1000 models of each type in order to negate variance created by the use of different train/test splits of the collected data.
 
 #### Linear Regression
-<img src="images/linearreg.png" alt="drawing" width="410"/>
+We started by using a simple linear regression model on our data.
+On average the linear model was able to achieve an average R<sup>2</sup> value of **0.6004295384885548** (with standard deviation: 0.07686185880285384).
 
-#### Lasso Regression
+We also used this linear model to test how effective our feature reduction worked on our data.
+When using features selected by our feed forward feature reduction process the average R<sup>2</sup> value was **0.5975599545286328** (with standard deviation: 0.07512821208305448).
+This shows that in many cases the feature reduction actually ***decreases*** accuracy.
+
+<img src="images/linearreg.png" alt="drawing" width="410"/>
+<img src="images/linearForward.png" alt="drawing" width="410"/>
+
 
 #### Ridge Regression
 The average R<sup>2</sup> value for models using raw data was **0.60133236** with a standard deviation of **0.07622105**
@@ -53,6 +60,23 @@ The R<sup>2</sup> value of approximately **0.60** shows that over half of the va
 <img src="images/forward_selection_ridge_regression.png" alt="drawing" width="410"/>
 
 With the reduction of features using forward selection, a hope was to see an increase in the value of R<sup>2</sup> for the model. As the values for R<sup>2</sup> for each model were within the standard deviations from the mean, there is negligble difference in the determination coefficient using forward selection features. While this aspect was not improved, an analysis of the **Predicted Normalized Price Per Sq. Ft** versus the **Actual Normalized Price Per Sq. Ft** for each model shows a tendency to underestimate when making predictions. A trendline with a slope of 1 shows neither a tendency to underestimate or overestimate. The use of forward selection features increased the slope of the trendline from **0.57657903** to **0.755802** showing significant reduction of the tendency to underestimate.
+
+
+#### Lasso Regression
+We implemented a lasso regression model for our data.
+We found that with a max R<sup>2</sup> value of **0.65810032** lasso regression is only
+somewhat better than linear regression, and at best as good as ridge regression.
+
+The optimal alpha value we found for lasso regression appears to be around **0.01**.
+
+<img src="images/lasso_alpha_1e-08.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.0001.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.001.png" alt="drawing" width="250"/>
+
+<img src="images/lasso_alpha_0.01.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.1.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.5.png" alt="drawing" width="250"/>
+
 
 #### GLMs
 <img src="images/glm.png" alt="drawing" width="410"/>
