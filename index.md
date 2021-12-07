@@ -102,8 +102,20 @@ Using GridSearchCV (and thanks to the relative speed of fitting the SVR model) w
 
 <img src="images/SVR.png" alt="drawing" width="410"/></p>
 
+
 #### Neural Networks
-<img src="images/neural_network.png" alt="drawing" width="410"/></p>
+We implemented a neural network model using the TensorFlow Keras API to see if there is another level of determination between the available demographic data and the Zillow Rent Index average price per sq. ft in a county. 
+
+In creating a deep learning model, experimentation with how many layers and how many nodes per layer to use is reagrded as an acceptable way to discover what structure of model works best with the given data. We found that 8 hidden layers with 200 nodes per layer provides for the highest accuracy, with further increases in the number of layers or nodes leading to overfitting and subsequent decreases in test accuracy. 
+
+Mean Absolute Percentage Error (MAPE) is a metric representing prediction accuracy which is not scaled by the numeric size of values, unlike other commonly used metrics, such as Mean Squared Error (MSE). In creating the neural network model, a MAPE of **14.0530%** was achieved when evaluating the model with test data.
+	
+<img src="images/neural_network_test.png" alt="drawing" width="410"/>
+<img src="images/neural_network_all.png" alt="drawing" width="410"/>
+
+The R<sup>2</sup> value for this model was **0.72329069**. This is a higher value than that of any of the other models and it is important to confirm that this correlation was not only present in a certain subset of test data. 
+
+Looking at the model's predictions on the entire set of data we would expect to see a higher R<sup>2</sup> value, as this would include predictions on data entries used for training. While this value is not generally a good measure of model accuracy, it can be used to confirm that the level of determination found in the predictions on the test data was not coincidental. The R<sup>2</sup> value of **0.9022597** for predictions on the set of all data is expectedly higher than that of the test data. This helps to confirm that the observed level of determination for the model is legitimate and that the deep learning approach has yielded the best results.
 
 
 ## Discussion on Feature Reduction
