@@ -79,6 +79,16 @@ The optimal alpha value we found for lasso regression appears to be around **0.0
 
 
 #### GLMs
+GLMs, such as Poisson and Gamma regression, are an extension of linear regression that may use link functions
+to relate the target variable to the linear output and can support non-Gaussian noise assumptions. 
+Housing prices are constrained to be greater than 0, but the output of linear regression is not
+bounded. In contrast, Gamma regression outputs are limited to non-negative values, making it
+potentially better-suited to this regression problem.
+
+We applied Gamma regression to the data, optimizing the regularization parameter with a cross-validated
+gridsearch. We achieved a mean R<sup>2</sup> value of **0.71209392** with a standard deviation of 0.08382044,
+substantially outperforming the other linear models.
+
 <img src="images/glm.png" alt="drawing" width="410"/>
 
 ### Non-Linear Approaches
