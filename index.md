@@ -45,6 +45,8 @@ We also used this linear model to test how effective our feature reduction worke
 When using features selected by our feed forward feature reduction process the average R<sup>2</sup> value was **0.5975599545286328** (with standard deviation: 0.07512821208305448).
 This shows that in many cases the feature reduction actually ***decreases*** accuracy.
 
+Below are two examples of reuslts from an instance of our linear regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
+
 <img src="images/linearreg.png" alt="drawing" width="410"/>
 <img src="images/linearForward.png" alt="drawing" width="410"/>
 
@@ -56,10 +58,12 @@ The average R<sup>2</sup> value for models using only forward selection features
 
 The R<sup>2</sup> value of approximately **0.60** shows that over half of the variation amongst the data can be explained by the model's inputs. This relationship between the demographic data which has been collected and the average price per sq. ft in a county as recorded by the Zillow Rent Index is encouraging in showing the effectivity of regression models utilizing the dataset.
 
-<img src="images/raw_ridge_regression.png" alt="drawing" width="410"/>
-<img src="images/forward_selection_ridge_regression.png" alt="drawing" width="410"/>
+Below are two examples of reuslts from an instance of our ridge regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
 
-With the reduction of features using forward selection, a hope was to see an increase in the value of R<sup>2</sup> for the model. As the values for R<sup>2</sup> for each model were within the standard deviations from the mean, there is negligble difference in the determination coefficient using forward selection features. While this aspect was not improved, an analysis of the **Predicted Normalized Price Per Sq. Ft** versus the **Actual Normalized Price Per Sq. Ft** for each model shows a tendency to underestimate when making predictions. A trendline with a slope of 1 shows neither a tendency to underestimate or overestimate. The use of forward selection features increased the slope of the trendline from **0.57657903** to **0.755802** showing significant reduction of the tendency to underestimate.
+<img src="images/ridgeRaw.png" alt="drawing" width="410"/>
+<img src="images/ridgeFeatures.png" alt="drawing" width="410"/>
+
+With the reduction of features using forward selection, a hope was to see an increase in the value of R<sup>2</sup> for the model. As the values for R<sup>2</sup> for each model were within the standard deviations from the mean, there is negligble difference in the determination coefficient using forward selection features. While this aspect was not improved, an analysis of the **Predicted Normalized Price Per Sq. Ft** versus the **Actual Normalized Price Per Sq. Ft** for each model shows a tendency to underestimate when making predictions. A trendline with a slope of 1 shows neither a tendency to underestimate or overestimate.
 
 
 #### Lasso Regression
@@ -100,6 +104,11 @@ substantially outperforming the other linear models.
 
 #### Neural Networks
 <img src="images/neural_network.png" alt="drawing" width="410"/></p>
+
+
+## Discussion on Feature Reduction
+Our feature reduction approaches resulted in no performance change or a slight decrease in model performances on linear and ridge regression.
+Because of this we decided that the feature reduction approaches we used would not be effective for our data and opted to use the full feature set on the remaining models.
 
 ## Conclusion
 (Old Conclusion - checkpoint)
