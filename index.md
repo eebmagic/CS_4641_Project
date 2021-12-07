@@ -98,9 +98,9 @@ substantially outperforming the other linear models.
 ### Non-Linear Approaches
 
 #### Support Vector Regression
-<img src="images/SVR.png" alt="drawing" width="410"/></p>
+Using GridSearchCV (and thanks to the relative speed of fitting the SVR model) we were able to test many combinations of hyperparameters to settle on a C of **10000** and a gamma of **0.0001** to get a model that fit our test data with competitive accuracy to the other models we implemented. 
 
-#### Random Forest?
+<img src="images/SVR.png" alt="drawing" width="410"/></p>
 
 #### Neural Networks
 <img src="images/neural_network.png" alt="drawing" width="410"/></p>
