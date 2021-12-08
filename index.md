@@ -140,24 +140,6 @@ Discovering correlations between demographics and housing prices can help invest
 Our findings of a significant and predictable level of determination between demographics and rent prices lead us to believe that our models can be useful for predicting future changes in rent price based on expected changes in demographics.  Future application of machine learning in this area can allow us to continue discovering correlations between demographics and housing prices and further understand what drives changes in property valuation.
 
 
-## Timeline
-### Project Proposal (10-7)
-
-The main idea of what our project - estimating rent based on the defining parameters of a County in the US - will consist of. This will be a good guideline for the steps we need to take in the project.
-
-| Background and Problem Definition | Methods | Potential Results and Discussion | References | Timeline | Proposal Video |
-| --------------------------------- | ------- | -------------------------------- | ---------- | -------- | -------------- |
-| Sagar | Felix | Evan | Sagar | Carlo | Ethan |
-
-### Pre-Processing (10-22)
-We plan to collectively work to clean the data and manipulate it into a format that we can easily use in our models. Within this group effort, Felix and Carlo will take the numerical data and normalize it while Sagar and Ethan do similar manipulation with the empirical data. Once this is done we need to combine the data we have from two separate datasets into a form we can work with together more easily in the final model - Evan's role. 
-
-### Project Midpoint Report (11-16)
-At this point we hope to have tried various methods for predicting output from all or some of our variables. It is difficult to say how much will be completed at this point with little guidelines up to this point, but even without a fully optimum model or solution, we at least hope to have some results to show at this milestone. We each plan to try to fit our data to one model or another. Sagar and Ethan will attempt as many linear approaches as possible while Felix, Carlo, and Evan plan to do the same with non-linear methods. 
-
-### Final Project (12-7)
-With the final project, the main step from the midpoint report will hopefully be optimization and a finalized algorithm for producing more accurate predictions. With a finalized algorithm, hopefully we can not only predict an output from the others, but know which parameters have the greatest impact on our output. After the midpoint report we will collectively choose which model fits our needs best and work together to optimize the hyperparameters. 
-
 ---
 
 ## References
