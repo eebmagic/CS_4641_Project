@@ -77,7 +77,6 @@ When testing a range of alpha value we found that with a max R<sup>2</sup> value
 <img src="images/lasso_alpha_1e-08.png" alt="drawing" width="410"/><br>
 <img src="images/lasso_alpha_0.0001.png" alt="drawing" width="410"/><br>
 <img src="images/lasso_alpha_0.001.png" alt="drawing" width="410"/><br>
-
 <img src="images/lasso_alpha_0.01.png" alt="drawing" width="410"/><br>
 <img src="images/lasso_alpha_0.1.png" alt="drawing" width="410"/><br>
 <img src="images/lasso_alpha_0.5.png" alt="drawing" width="410"/>
@@ -98,15 +97,18 @@ We applied Gamma regression to the data, optimizing the regularization parameter
 gridsearch. We achieved a mean R<sup>2</sup> value of **0.71209392** with a standard deviation of 0.08382044,
 substantially outperforming the other linear models.
 
+<p align="center">
 <img src="images/glm.png" alt="drawing" width="410"/>
+</p>
 
 ### Non-Linear Approaches
 
 #### Support Vector Regression
 Using GridSearchCV (and thanks to the relative speed of fitting the SVR model) we were able to test many combinations of hyperparameters to settle on a C of **10000** and a gamma of **0.0001** to get a model that fit our test data with competitive accuracy to the other models we implemented. 
 
+<p align="center">
 <img src="images/SVR.png" alt="drawing" width="410"/></p>
-
+</p>
 
 #### Neural Networks
 We implemented a neural network model using the TensorFlow Keras API with a Stochastic Gradient Descent optimization function to see if there is another level of determination between the available demographic data and the Zillow Rent Index average price per sq. ft in a county. 
@@ -114,9 +116,11 @@ We implemented a neural network model using the TensorFlow Keras API with a Stoc
 In creating a deep learning model, experimentation with how many layers and how many nodes per layer to use is reagrded as an acceptable way to discover what structure of model works best with the given data. We found that 8 hidden layers with 200 nodes per layer provides for the highest accuracy, with further increases in the number of layers or nodes leading to overfitting and subsequent decreases in test accuracy. 
 
 Mean Absolute Percentage Error (MAPE) is a metric representing prediction accuracy which is not scaled by the numeric size of values, unlike other commonly used metrics, such as Mean Squared Error (MSE). In creating the neural network model, a MAPE of **14.0530%** was achieved when evaluating the model with test data.
-	
-<img src="images/neural_network_test.png" alt="drawing" width="410"/>
+
+<p align="center">
+<img src="images/neural_network_test.png" alt="drawing" width="410"/><br>
 <img src="images/neural_network_all.png" alt="drawing" width="410"/>
+</p>
 
 The R<sup>2</sup> value for this model was **0.72329069**. This is a higher value than that of any of the other models and it is important to confirm that this correlation was not only present in a certain subset of test data. 
 
@@ -144,7 +148,7 @@ Discovering correlations between demographics and housing prices can help invest
 Our findings of a significant and predictable level of determination between demographics and rent prices lead us to believe that our models can be useful for predicting future changes in rent price based on expected changes in demographics. Future application of machine learning in this area can allow us to continue discovering correlations between demographics and housing prices and further understand what drives changes in property valuation.
 
 
-## Proposed Timeline
+## Timeline
 ### Project Proposal (10-7)
 
 The main idea of what our project - estimating rent based on the defining parameters of a County in the US - will consist of. This will be a good guideline for the steps we need to take in the project.
