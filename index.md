@@ -125,7 +125,7 @@ Because of this we decided that the feature reduction approaches we used would n
 ## Discussion on Model Weights
 Regression models operate on retrievable weights for how each input feature is factored in when producing a prediction. Making relative comparisons of the significance of each feature can help us to see the underlying correlations between specific demographic variables and housing prices. 
 
-The Gamma Regression model had the highest level of accuracy of our linear models with an R<sup>2</sup> value of **0.71209392**. This model's most significant input was income per capita, followed by metrics of race and ethnicity. The percentage of workers in the service industry was also highly significant and positively correlated with housing prices.
+The Gamma Regression model had the highest level of accuracy of our linear models with an R<sup>2</sup> value of 0.71209392. This model's most significant input was income per capita, followed by metrics of race and ethnicity. The percentage of workers in the service industry was also highly significant and positively correlated with housing prices.
 
 
 ## Conclusion
