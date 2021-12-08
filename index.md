@@ -104,7 +104,7 @@ Using GridSearchCV (and thanks to the relative speed of fitting the SVR model) w
 
 
 #### Neural Networks
-We implemented a neural network model using the TensorFlow Keras API to see if there is another level of determination between the available demographic data and the Zillow Rent Index average price per sq. ft in a county. 
+We implemented a neural network model using the TensorFlow Keras API with a Stochastic Gradient Descent optimization function to see if there is another level of determination between the available demographic data and the Zillow Rent Index average price per sq. ft in a county. 
 
 In creating a deep learning model, experimentation with how many layers and how many nodes per layer to use is reagrded as an acceptable way to discover what structure of model works best with the given data. We found that 8 hidden layers with 200 nodes per layer provides for the highest accuracy, with further increases in the number of layers or nodes leading to overfitting and subsequent decreases in test accuracy. 
 
@@ -123,10 +123,9 @@ Our feature reduction approaches resulted in no performance change or a slight d
 Because of this we decided that the feature reduction approaches we used would not be effective for our data and opted to use the full feature set on the remaining models.
 
 ## Conclusion
-(Old Conclusion - checkpoint)
-The creation of our first model has given us a positive outlook on the effectiveness that our future models can have. The R<sup>2</sup> of 0.60 shows a level of determination which can be predicted on between our model's inputs and the average price per sq. ft in a county as recorded by the Zillow Rent Index. The reduction in the tendency to underestimate provided by the use of forward selection features is hopeful in showing us that fine-tuning of our models in the future can yield positive results. The creation of additional models in the future through the use of other machine learning techniques will allow us to measure correlations present in our collected data in different ways and produce stronger results.
 
-(New conclusion)
+The creation of our models has shown us that there is a significant and predictable level of determination between demographics and housing prices. Gamma Regression and the Neural Network yielded R<sup>2</sup> values of above 0.70, showing substantial improvement in accuracy from our intial models which used simple regression techniques. 
+
 
 ## Proposed Timeline
 ### Project Proposal (10-7)
