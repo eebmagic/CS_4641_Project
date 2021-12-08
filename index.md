@@ -122,9 +122,21 @@ Looking at the model's predictions on the entire set of data we would expect to 
 Our feature reduction approaches resulted in no performance change or a slight decrease in model performances on linear and ridge regression.
 Because of this we decided that the feature reduction approaches we used would not be effective for our data and opted to use the full feature set on the remaining models.
 
+## Discussion on Model Weights
+Regression models operate on retrievable weights for how each input feature is factored in when producing a prediction. Making relative comparisons of the significance of each feature can help us to see the underlying correlations between specific demographic variables and housing prices. 
+
+The Gamma Regression model had the highest level of accuracy of our linear models with an R<sup>2</sup> value of **0.71209392**. This model's most significant input was income per capita, followed by metrics of race and ethnicity. The percentage of workers in the service industry was also highly significant and positively correlated with housing prices.
+
+
 ## Conclusion
 
-The creation of our models has shown us that there is a significant and predictable level of determination between demographics and housing prices. Gamma Regression and the Neural Network yielded R<sup>2</sup> values of above 0.70, showing substantial improvement in accuracy from our intial models which used simple regression techniques. 
+The goal of this project was to predict housing prices of counties in the United States given demographic data using supervised machine learning techniques and find relevant correlations between the American Community Survey of 2015 and the Zillow Rent Index of the median housing price per square foot of a given county.
+
+The creation of our models has shown us that there is a significant level of determination between demographics and housing prices which can be predicted on. Gamma Regression and the Neural Network yielded R<sup>2</sup> values of above 0.70, showing substantial improvement in accuracy from our intial models which used simple regression techniques. 
+
+Discovering correlations between demographics and housing prices can help investors in real estate to understand how property values could change in the future with changes in the demographics of an area. It can also help governments to make decisions on how housing can become more affordable and alert them of expected property value increases which could lead to rapid displacement of individuals. We found that income per capita, race and ethnicity, and percentage of workers in the service industry have the greatest predictable determination with rent prices.
+
+Our findings of a significant and predictable level of determination between demographics and rent prices lead us to believe that our models can be useful for predicting future changes in rent price based on expected changes in demographics. It is clear that the future application of machine learning in this area can allow us to continue discovering correlations between demographics and housing prices and further understand what drives changes in property valuation.
 
 
 ## Proposed Timeline
