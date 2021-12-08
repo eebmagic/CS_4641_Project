@@ -130,6 +130,7 @@ The Gamma Regression model had the highest level of accuracy of our linear model
 After we trained our neural network model we found the optimal input values into the network to mimize and maximize the output.
 This allows us to identify county features that are more likely to have significance on minimizing/maximizing the local rent.
 However it should be noted that the resulting inputs are singular local minimums for achieving minimal/maximal rent and are not necessarily the exclusive inputs that result in extrema.
+These weights should be considered to be observations of our neural network rather than observations regarding the data (in the way that our linear regression coefficients are).
 
 #### Maximal Input Observations
 In the maximal input set income and income per capita are the highest weighted two features.
@@ -256,7 +257,7 @@ The creation of our models has shown us that there is a significant level of det
 
 Discovering correlations between demographics and housing prices can help investors in real estate to understand how property values could change in the future with changes in the demographics of an area. It can also help governments to make decisions on how housing can become more affordable and alert them of expected property value increases which could lead to rapid displacement of individuals. We found that income per capita, race and ethnicity, and percentage of workers in the service industry have the greatest predictable determination with rent prices. The correlation between percentage of workers in the service industry and rent prices shows us that the the determination between demographics and housing prices is not only based on factors which would be expected, such as income.
 
-Our findings of a significant and predictable level of determination between demographics and rent prices lead us to believe that our models can be useful for predicting future changes in rent price based on expected changes in demographics.  Future application of machine learning in this area can allow us to continue discovering correlations between demographics and housing prices and further understand what drives changes in property valuation.
+Our findings of a significant and predictable level of determination between demographics and rent prices lead us to believe that our models can be useful for predicting future changes in rent price based on expected changes in demographics.  Future application of machine learning in this area can allow us to continue discovering correlations between demographics and housing prices and further understand what drives changes in regional cost of housing.
 
 
 ## References
