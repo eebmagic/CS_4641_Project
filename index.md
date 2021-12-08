@@ -47,9 +47,10 @@ This shows that in many cases the feature reduction actually ***decreases*** acc
 
 Below are two examples of reuslts from an instance of our linear regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
 
-<img src="images/linearreg.png" alt="drawing" width="410"/>
-<img src="images/linearForward.png" alt="drawing" width="410"/>
-
+<p align="center">
+<img src="images/linearreg.png" alt="drawing" width="610"/>
+<img src="images/linearForward.png" alt="drawing" width="610"/>
+</p>
 
 #### Ridge Regression
 The average R<sup>2</sup> value for models using raw data was **0.60133236** with a standard deviation of **0.07622105**
