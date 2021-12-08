@@ -48,7 +48,7 @@ This shows that in many cases the feature reduction actually ***decreases*** acc
 Below are two examples of reuslts from an instance of our linear regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
 
 <p align="center">
-<img src="images/linearreg.png" alt="drawing" width="410"/>
+<img src="images/linearreg.png" alt="drawing" width="410"/><br>
 <img src="images/linearForward.png" alt="drawing" width="410"/>
 </p>
 
@@ -61,8 +61,10 @@ The R<sup>2</sup> value of approximately **0.60** shows that over half of the va
 
 Below are two examples of reuslts from an instance of our ridge regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
 
-<img src="images/ridgeRaw.png" alt="drawing" width="410"/>
+<p align="center">
+<img src="images/ridgeRaw.png" alt="drawing" width="410"/><br>
 <img src="images/ridgeFeatures.png" alt="drawing" width="410"/>
+</p>
 
 With the reduction of features using forward selection, a hope was to see an increase in the value of R<sup>2</sup> for the model. As the values for R<sup>2</sup> for each model were within the standard deviations from the mean, there is negligble difference in the determination coefficient using forward selection features. While this aspect was not improved, an analysis of the **Predicted Normalized Price Per Sq. Ft** versus the **Actual Normalized Price Per Sq. Ft** for each model shows a tendency to underestimate when making predictions. A trendline with a slope of 1 shows neither a tendency to underestimate or overestimate.
 
@@ -71,13 +73,15 @@ With the reduction of features using forward selection, a hope was to see an inc
 We implemented a lasso regression model for our data.
 When testing a range of alpha value we found that with a max R<sup>2</sup> value of **0.65810032** the optimal alpha value appears to be around **0.01**.
 
-<img src="images/lasso_alpha_1e-08.png" alt="drawing" width="250"/>
-<img src="images/lasso_alpha_0.0001.png" alt="drawing" width="250"/>
-<img src="images/lasso_alpha_0.001.png" alt="drawing" width="250"/>
+<p align="center">
+<img src="images/lasso_alpha_1e-08.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.0001.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.001.png" alt="drawing" width="410"/><br>
 
-<img src="images/lasso_alpha_0.01.png" alt="drawing" width="250"/>
-<img src="images/lasso_alpha_0.1.png" alt="drawing" width="250"/>
-<img src="images/lasso_alpha_0.5.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.01.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.1.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.5.png" alt="drawing" width="410"/>
+</p>
 
 When testing on 10,000 instances of our lasso regression model with an alpha of **0.01** there was a mean R<sup>2</sup> value of **0.6042962583469954** with a standard deviation of **0.0749576511577823**.
 This suggests that at best out lasso regression model performs only very marginally better than linear and ridge regression.
