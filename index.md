@@ -39,10 +39,10 @@ To analyze the effectiveness of the regression models, we have collected the R<s
 
 #### Linear Regression
 We started by using a simple linear regression model on our data.
-On average the linear model was able to achieve an average R<sup>2</sup> value of **0.6004295384885548** (with standard deviation: 0.07686185880285384).
+On average the linear model was able to achieve an average R<sup>2</sup> value of **0.60042954** (with standard deviation: 0.07686186).
 
 We also used this linear model to test how effective our feature reduction worked on our data.
-When using features selected by our feed forward feature reduction process the average R<sup>2</sup> value was **0.5975599545286328** (with standard deviation: 0.07512821208305448).
+When using features selected by our feed forward feature reduction process the average R<sup>2</sup> value was **0.59755995** (with standard deviation: 0.07512821).
 This shows that in many cases the feature reduction actually ***decreases*** accuracy.
 
 Below are two examples of reuslts from an instance of our linear regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
@@ -76,7 +76,7 @@ When testing a range of alpha value we found that with a max R<sup>2</sup> value
 <img src="images/lasso_alpha_0.1.png" alt="drawing" width="250"/>
 <img src="images/lasso_alpha_0.5.png" alt="drawing" width="250"/>
 
-When testing on 10,000 instances of our lasso regression model with an alpha of **0.01** there was a mean R<sup>2</sup> value of **0.6042962583469954** with a standard deviation of **0.0749576511577823**.
+When testing on 10,000 instances of our lasso regression model with an alpha of **0.01** there was a mean R<sup>2</sup> value of **0.60429626** with a standard deviation of **0.07495765**.
 This suggests that at best out lasso regression model performs only very marginally better than linear and ridge regression.
 
 
