@@ -47,9 +47,10 @@ This shows that in many cases the feature reduction actually ***decreases*** acc
 
 Below are two examples of reuslts from an instance of our linear regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
 
-<img src="images/linearreg.png" alt="drawing" width="410"/>
+<p align="center">
+<img src="images/linearreg.png" alt="drawing" width="410"/><br>
 <img src="images/linearForward.png" alt="drawing" width="410"/>
-
+</p>
 
 #### Ridge Regression
 The average R<sup>2</sup> value for models using raw data was **0.60133236** with a standard deviation of **0.07622105**
@@ -60,8 +61,10 @@ The R<sup>2</sup> value of approximately **0.60** shows that over half of the va
 
 Below are two examples of reuslts from an instance of our ridge regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
 
-<img src="images/ridgeRaw.png" alt="drawing" width="410"/>
+<p align="center">
+<img src="images/ridgeRaw.png" alt="drawing" width="410"/><br>
 <img src="images/ridgeFeatures.png" alt="drawing" width="410"/>
+</p>
 
 With the reduction of features using forward selection, a hope was to see an increase in the value of R<sup>2</sup> for the model. As the values for R<sup>2</sup> for each model were within the standard deviations from the mean, there is negligble difference in the determination coefficient using forward selection features. While this aspect was not improved, an analysis of the **Predicted Normalized Price Per Sq. Ft** versus the **Actual Normalized Price Per Sq. Ft** for each model shows a tendency to underestimate when making predictions. A trendline with a slope of 1 shows neither a tendency to underestimate or overestimate.
 
@@ -70,13 +73,14 @@ With the reduction of features using forward selection, a hope was to see an inc
 We implemented a lasso regression model for our data.
 When testing a range of alpha value we found that with a max R<sup>2</sup> value of **0.65810032** the optimal alpha value appears to be around **0.01**.
 
-<img src="images/lasso_alpha_1e-08.png" alt="drawing" width="250"/>
-<img src="images/lasso_alpha_0.0001.png" alt="drawing" width="250"/>
-<img src="images/lasso_alpha_0.001.png" alt="drawing" width="250"/>
-
-<img src="images/lasso_alpha_0.01.png" alt="drawing" width="250"/>
-<img src="images/lasso_alpha_0.1.png" alt="drawing" width="250"/>
-<img src="images/lasso_alpha_0.5.png" alt="drawing" width="250"/>
+<p align="center">
+<img src="images/lasso_alpha_1e-08.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.0001.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.001.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.01.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.1.png" alt="drawing" width="410"/><br>
+<img src="images/lasso_alpha_0.5.png" alt="drawing" width="410"/>
+</p>
 
 When testing on 10,000 instances of our lasso regression model with an alpha of **0.01** there was a mean R<sup>2</sup> value of **0.6042962583469954** with a standard deviation of **0.0749576511577823**.
 This suggests that at best out lasso regression model performs only very marginally better than linear and ridge regression.
@@ -93,15 +97,18 @@ We applied Gamma regression to the data, optimizing the regularization parameter
 gridsearch. We achieved a mean R<sup>2</sup> value of **0.71209392** with a standard deviation of 0.08382044,
 substantially outperforming the other linear models.
 
+<p align="center">
 <img src="images/glm.png" alt="drawing" width="410"/>
+</p>
 
 ### Non-Linear Approaches
 
 #### Support Vector Regression
 Using GridSearchCV (and thanks to the relative speed of fitting the SVR model) we were able to test many combinations of hyperparameters to settle on a C of **10000** and a gamma of **0.0001** to get a model that fit our test data with competitive accuracy to the other models we implemented. 
 
+<p align="center">
 <img src="images/SVR.png" alt="drawing" width="410"/></p>
-
+</p>
 
 #### Neural Networks
 We implemented a neural network model using the TensorFlow Keras API with a Stochastic Gradient Descent optimization function to see if there is another level of determination between the available demographic data and the Zillow Rent Index average price per sq. ft in a county. 
@@ -109,9 +116,11 @@ We implemented a neural network model using the TensorFlow Keras API with a Stoc
 In creating a deep learning model, experimentation with how many layers and how many nodes per layer to use is reagrded as an acceptable way to discover what structure of model works best with the given data. We found that 8 hidden layers with 200 nodes per layer provides for the highest accuracy, with further increases in the number of layers or nodes leading to overfitting and subsequent decreases in test accuracy. 
 
 Mean Absolute Percentage Error (MAPE) is a metric representing prediction accuracy which is not scaled by the numeric size of values, unlike other commonly used metrics, such as Mean Squared Error (MSE). In creating the neural network model, a MAPE of **14.0530%** was achieved when evaluating the model with test data.
-	
-<img src="images/neural_network_test.png" alt="drawing" width="410"/>
+
+<p align="center">
+<img src="images/neural_network_test.png" alt="drawing" width="410"/><br>
 <img src="images/neural_network_all.png" alt="drawing" width="410"/>
+</p>
 
 The R<sup>2</sup> value for this model was **0.72329069**. This is a higher value than that of any of the other models and it is important to confirm that this correlation was not only present in a certain subset of test data. 
 
@@ -139,7 +148,7 @@ Discovering correlations between demographics and housing prices can help invest
 Our findings of a significant and predictable level of determination between demographics and rent prices lead us to believe that our models can be useful for predicting future changes in rent price based on expected changes in demographics.  Future application of machine learning in this area can allow us to continue discovering correlations between demographics and housing prices and further understand what drives changes in property valuation.
 
 
-## Proposed Timeline
+## Timeline
 ### Project Proposal (10-7)
 
 The main idea of what our project - estimating rent based on the defining parameters of a County in the US - will consist of. This will be a good guideline for the steps we need to take in the project.
