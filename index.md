@@ -48,8 +48,8 @@ This shows that in many cases the feature reduction actually ***decreases*** acc
 Below are two examples of reuslts from an instance of our linear regression model, one with full features and one with reduced features (reduced by our feedforward implementation):
 
 <p align="center">
-<img src="images/linearreg.png" alt="drawing" width="610"/>
-<img src="images/linearForward.png" alt="drawing" width="610"/>
+<img src="images/linearreg.png" alt="drawing" width="410"/>
+<img src="images/linearForward.png" alt="drawing" width="410"/>
 </p>
 
 #### Ridge Regression
