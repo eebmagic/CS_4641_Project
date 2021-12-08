@@ -17,14 +17,12 @@ This project aims to predict housing prices of counties in the United States giv
 Two different datasets from Kaggle were selected in this analysis -- the [2015 U.S Census](https://www.kaggle.com/zillow/rent-index) and the [Zillow Rent Index](https://www.kaggle.com/muonneutrino/us-census-demographic-data). 
 
 The Zillow Rent Index has two collections, median estimated monthly rental price for a given city/town and median estimated monthly rental price per square foot for a given city/town.
-Much of this data has been prescreened and cleaned by Zillow by removing outliers and weighting the homes that actually rent as higher. The data provided details the Rent Index for each month for each U.S City (and corresponding county which will be used to match with the census) from 2010 to 2017. The data has 13131 unique cities and 1820 counties.
-In order to get the rent per county as opposed to city/town we build county data from the averages of cities contained in the same county.
+Much of this data has been prescreened and cleaned by Zillow by removing outliers and weighting the homes that actually rent as higher. To create the index, Zillow weights every home in a given region that has a Rental Zestimate and aggregates them. The data provided details this Rent Index for each month for each U.S City (and corresponding county which will be used to match with the census) from 2010 to 2017. The data has 13131 unique cities and 1820 counties. In order to get the rent per county as opposed to city/town we build county data from the averages of cities contained in the same county.
 
 The U.S Census dataset includes several demographic features of counties. This source also included a collection with breakdown by census tracts (which are much smaller than counties), however we decided to only use the collection with data for full counties. This allows us to more easily make comparisons across datasets.
 These columns include information such as median household income, racial demographics, poverty rates, profession, and commuting habbits (drive, transit, walk, commute time, etc.).
 
 To clean the data, the first thing we did was remove the counties that don't overlap between the two data sets. The datasets were then sorted and combined into one, with each numerical column normalized.
-We have implemented several feature selection methods: forward selection, backward selection, and lasso selection.
 
 ## Methods
 Our problem is a regression problem, where we attempt to approximate the relationship between independent variables (population, etc.) and a dependent variable (median rent).
@@ -260,8 +258,6 @@ Discovering correlations between demographics and housing prices can help invest
 
 Our findings of a significant and predictable level of determination between demographics and rent prices lead us to believe that our models can be useful for predicting future changes in rent price based on expected changes in demographics.  Future application of machine learning in this area can allow us to continue discovering correlations between demographics and housing prices and further understand what drives changes in property valuation.
 
-
----
 
 ## References
 MuonNeutrino. (2019). US Census Demographic Data (Version 3) [Data file] Retrieved from https://www.kaggle.com/muonneutrino/us-census-demographic-data.
