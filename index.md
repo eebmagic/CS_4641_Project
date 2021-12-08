@@ -17,14 +17,12 @@ This project aims to predict housing prices of counties in the United States giv
 Two different datasets from Kaggle were selected in this analysis -- the [2015 U.S Census](https://www.kaggle.com/zillow/rent-index) and the [Zillow Rent Index](https://www.kaggle.com/muonneutrino/us-census-demographic-data). 
 
 The Zillow Rent Index has two collections, median estimated monthly rental price for a given city/town and median estimated monthly rental price per square foot for a given city/town.
-Much of this data has been prescreened and cleaned by Zillow by removing outliers and weighting the homes that actually rent as higher. The data provided details the Rent Index for each month for each U.S City (and corresponding county which will be used to match with the census) from 2010 to 2017. The data has 13131 unique cities and 1820 counties.
-In order to get the rent per county as opposed to city/town we build county data from the averages of cities contained in the same county.
+Much of this data has been prescreened and cleaned by Zillow by removing outliers and weighting the homes that actually rent as higher. To create the index, Zillow weights every home in a given region that has a Rental Zestimate and aggregates them. The data provided details this Rent Index for each month for each U.S City (and corresponding county which will be used to match with the census) from 2010 to 2017. The data has 13131 unique cities and 1820 counties. In order to get the rent per county as opposed to city/town we build county data from the averages of cities contained in the same county.
 
 The U.S Census dataset includes several demographic features of counties. This source also included a collection with breakdown by census tracts (which are much smaller than counties), however we decided to only use the collection with data for full counties. This allows us to more easily make comparisons across datasets.
 These columns include information such as median household income, racial demographics, poverty rates, profession, and commuting habbits (drive, transit, walk, commute time, etc.).
 
 To clean the data, the first thing we did was remove the counties that don't overlap between the two data sets. The datasets were then sorted and combined into one, with each numerical column normalized.
-We have implemented several feature selection methods: forward selection, backward selection, and lasso selection.
 
 ## Methods
 Our problem is a regression problem, where we attempt to approximate the relationship between independent variables (population, etc.) and a dependent variable (median rent).
@@ -139,6 +137,24 @@ Discovering correlations between demographics and housing prices can help invest
 
 Our findings of a significant and predictable level of determination between demographics and rent prices lead us to believe that our models can be useful for predicting future changes in rent price based on expected changes in demographics.  Future application of machine learning in this area can allow us to continue discovering correlations between demographics and housing prices and further understand what drives changes in property valuation.
 
+
+## Timeline
+### Project Proposal (10-7)
+
+The main idea of what our project - estimating rent based on the defining parameters of a County in the US - will consist of. This will be a good guideline for the steps we need to take in the project.
+
+| Background and Problem Definition | Methods | Potential Results and Discussion | References | Timeline | Proposal Video |
+| --------------------------------- | ------- | -------------------------------- | ---------- | -------- | -------------- |
+| Sagar | Felix | Evan | Sagar | Carlo | Ethan |
+
+### Pre-Processing (10-22)
+We plan to collectively work to clean the data and manipulate it into a format that we can easily use in our models. Within this group effort, Felix and Carlo will take the numerical data and normalize it while Sagar and Ethan do similar manipulation with the empirical data. Once this is done we need to combine the data we have from two separate datasets into a form we can work with together more easily in the final model - Evan's role. 
+
+### Project Midpoint Report (11-16)
+At this point we hope to have tried various methods for predicting output from all or some of our variables. It is difficult to say how much will be completed at this point with little guidelines up to this point, but even without a fully optimum model or solution, we at least hope to have some results to show at this milestone. We each plan to try to fit our data to one model or another. Sagar and Ethan will attempt as many linear approaches as possible while Felix, Carlo, and Evan plan to do the same with non-linear methods. 
+
+### Final Project (12-7)
+With the final project, the main step from the midpoint report will hopefully be optimization and a finalized algorithm for producing more accurate predictions. With a finalized algorithm, hopefully we can not only predict an output from the others, but know which parameters have the greatest impact on our output. After the midpoint report we will collectively choose which model fits our needs best and work together to optimize the hyperparameters. 
 
 ---
 
