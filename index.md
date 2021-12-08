@@ -69,12 +69,12 @@ With the reduction of features using forward selection, a hope was to see an inc
 We implemented a lasso regression model for our data.
 When testing a range of alpha value we found that with a max R<sup>2</sup> value of **0.65810032** the optimal alpha value appears to be around **0.01**.
 
-<img src="images/lasso_alpha_1e-08.png" alt="drawing" width="410"/>
-<img src="images/lasso_alpha_0.0001.png" alt="drawing" width="410"/>
-<img src="images/lasso_alpha_0.001.png" alt="drawing" width="410"/>
-<img src="images/lasso_alpha_0.01.png" alt="drawing" width="410"/>
-<img src="images/lasso_alpha_0.1.png" alt="drawing" width="410"/>
-<img src="images/lasso_alpha_0.5.png" alt="drawing" width="410"/>
+<img src="images/lasso_alpha_1e-08.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.0001.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.001.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.01.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.1.png" alt="drawing" width="250"/>
+<img src="images/lasso_alpha_0.5.png" alt="drawing" width="250"/>
 
 When testing on 10,000 instances of our lasso regression model with an alpha of **0.01** there was a mean R<sup>2</sup> value of **0.6042962583469954** with a standard deviation of **0.0749576511577823**.
 This suggests that at best out lasso regression model performs only very marginally better than linear and ridge regression.
