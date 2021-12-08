@@ -126,7 +126,128 @@ Because of this we decided that the feature reduction approaches we used would n
 ## Discussion on Model Weights
 Regression models operate on retrievable weights for how each input feature is factored in when producing a prediction. Making relative comparisons of the significance of each feature can help us to see the underlying correlations between specific demographic variables and housing prices. 
 
-The Gamma Regression model had the highest level of accuracy of our linear models with an R<sup>2</sup> value of 0.71209392. This model's most significant input was income per capita, followed by metrics of race and ethnicity. The percentage of workers in the service industry was also highly significant and positively correlated with housing prices. This is an interesting finding as it is not as clearly apparent that a significant positive correlation would exist between percentage of workers in the service industry and rent prices as the expected correlation between income and rent prices.
+The Gamma Regression model had the highest level of accuracy of our linear models with an R<sup>2</sup> value of **0.71209392**. This model's most significant input was income per capita, followed by metrics of race and ethnicity. The percentage of workers in the service industry was also highly significant and positively correlated with housing prices. This is an interesting finding as it is not as clearly apparent that a significant positive correlation would exist between percentage of workers in the service industry and rent prices as the expected correlation between income and rent prices.
+
+## Discussion on Mimimal/Maximal inputs for Neural Network
+After we trained our neural network model we found the optimal input values into the network to mimize and maximize the output.
+This allows us to identify county features that are more likely to have significance on minimizing/maximizing the local rent.
+However it should be noted that the resulting inputs are singular local minimums for achieving minimal/maximal rent and are not necessarily the exclusive inputs that result in extrema.
+
+#### Maximal Input Observations
+In the maximal input set income and income per capita are the highest weighted two features.
+This is somewhat obvious because more wealthy people are going to be able to live in places with higher rent.
+Additionally, the number of workers in the service industry ("Service" in table) was also highly weighted in the maximal input set, supporting the findings by the GLM.
+
+Notably, white is the only ethnicity group with a substantially postive weight while all other ethnicity groups are relatively neutral except for asian which is subtantially negative.
+These extremes for white and asian features could be a result of income differences or by general preferences on where to live that may be shared by larger communities.
+
+Interestingly number of people taking public transit ("Transit" in table) is highly weighted. This could likely be a result of more expensive counties being in very urban locations which are more likely to have better transportation infrastructure, such as New York City, Seattle, and Boston.
+
+Supprisingly, total population was a relatively neutral weight, indicating that median household income and income per capita is a stronger predictor for average rent per square foot.
+
+#### Minimal Input Observations
+Many of the trends in these feature weights become somewhat non-sensical. This is likely because there is more diversity amoung lower-rent counties in the US compared to higher rent areas being consolidated mostly in urban centers.
+
+Some of these feature weights are somewhat obvious, such as poverty and unemployment having a high weight.
+
+Surprisingly, number of people employed in management, business, science, and arts ("Professional" in table) is the highest weighted feature. This could likely be because the majority of people in this kind of work might be more likely to live in more rural/suburban areas where rent will be lower.
+
+Transportation features had interesting contrasts compared to the maximal inputs.
+Carpool was the highest weighted transpotation option, while walk and drive have almost half the weight. This is likely because of how expensive car ownership can be.
+
+Where in the maximal set total population was relatively neutral, in the minimal set total population has a strong negative weight. This is likely because of correlation between more rural areas and lower rent.
+
+Interestingly, the weights of ethnicity groups are not the inverse of those in the maximal set.
+White and hispanic are relatively neutral, black and pacific islander are negative, and asian is still strongly negative. These trends seem to not be consistent with the maximal set and could possibly be attributed to the diversity of lower-rent counties in our dataset, or these weights potentiall being a local-minima.
+
+
+#### Full Data
+More thorough descriptions for these feature names can be found [here at the original data source](https://www.kaggle.com/muonneutrino/us-census-demographic-data)
+
+<table>
+<tr><th> Maximizing Inputs (output: 1.0) </th><th> Minimizing Inputs (output: 0.45) </th></tr>
+<tr><td>
+
+| Feature      | Weight              |
+| ------------ | ------------------- |
+| IncomePerCap | 0.10852174460887909 |
+| Income | 0.10700040310621262 |
+| Service | 0.10429070889949799 |
+| OtherTransp | 0.08228355646133423 |
+| FamilyWork | 0.07313845306634903 |
+| Transit | 0.0699041336774826 |
+| Construction | 0.046932611614465714 |
+| Drive | 0.03839851915836334 |
+| White | 0.0365321971476078 |
+| Unemployment | 0.030745597556233406 |
+| PublicWork | 0.023463215678930283 |
+| Employed | 0.023453395813703537 |
+| PrivateWork | 0.021612994372844696 |
+| Professional | 0.01853405311703682 |
+| Walk | 0.017030861228704453 |
+| Black | 0.0018646498210728168 |
+| ChildPoverty | 0.0011416589841246605 |
+| Hispanic | -0.013829322531819344 |
+| Poverty | -0.013860789127647877 |
+| SelfEmployed | -0.0177816953510046 |
+| MeanCommute | -0.022036783397197723 |
+| WorkAtHome | -0.03342330455780029 |
+| Citizen | -0.03391476348042488 |
+| Native | -0.06556274741888046 |
+| TotalPop | -0.07002244889736176 |
+| Pacific | -0.07014269381761551 |
+| Carpool | -0.07504579424858093 |
+| Office | -0.08804844319820404 |
+| Women | -0.08838076144456863 |
+| Men | -0.09291888028383255 |
+| Asian | -0.10023441165685654 |
+| IncomeErr | -0.1340840756893158 |
+| Production | -0.13445426523685455 |
+| IncomePerCapErr | -0.15369205176830292 |
+
+
+</td><td>
+
+| Feature      | Weight              |
+| ------------ | ------------------- |
+| Professional | 0.57829350233078 |
+| Poverty | 0.376177579164505 |
+| Carpool | 0.2991604208946228 |
+| Men | 0.2727586627006531 |
+| Unemployment | 0.22772835195064545 |
+| Citizen | 0.20276325941085815 |
+| Women | 0.18973925709724426 |
+| Drive | 0.18855197727680206 |
+| Walk | 0.13964374363422394 |
+| PublicWork | 0.09415125101804733 |
+| IncomePerCapErr | 0.08740082383155823 |
+| White | 0.04197753965854645 |
+| Employed | 0.03250711038708687 |
+| Income | -0.0271382424980402 |
+| Construction | -0.039210740476846695 |
+| Hispanic | -0.04586224630475044 |
+| Production | -0.07242844253778458 |
+| WorkAtHome | -0.11925447732210159 |
+| ChildPoverty | -0.18371690809726715 |
+| Office | -0.18793609738349915 |
+| Black | -0.19764700531959534 |
+| SelfEmployed | -0.20220714807510376 |
+| Service | -0.2288183718919754 |
+| IncomeErr | -0.23954837024211884 |
+| TotalPop | -0.24955736100673676 |
+| Pacific | -0.27147606015205383 |
+| PrivateWork | -0.2764982283115387 |
+| MeanCommute | -0.3165845274925232 |
+| Native | -0.327545166015625 |
+| Transit | -0.3466421961784363 |
+| OtherTransp | -0.35539671778678894 |
+| IncomePerCap | -0.37357577681541443 |
+| FamilyWork | -0.38044095039367676 |
+| Asian | -0.45904937386512756 |
+
+
+</td></tr> </table>
+
 
 
 ## Conclusion
